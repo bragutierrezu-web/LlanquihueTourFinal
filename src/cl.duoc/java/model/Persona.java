@@ -1,21 +1,23 @@
-package Model;
+package model;
 
 public class Persona {
     private String nombre;
     private String rut;
     private String telefono;
     private int edad;
+    private Direccion direccion;
 
     public Persona () {
 
     }
 
 
-    public Persona (String nombre, int edad, String rut, String telefono) {
+    public Persona (String nombre, int edad, String rut, String telefono, Direccion direccion) {
         this.nombre = nombre;
         this.edad = edad;
         this.rut = rut;
         this.telefono = telefono;
+        this.direccion = direccion;
 
 
     }
@@ -30,10 +32,13 @@ public class Persona {
 
     public String getNombre() {
         return nombre;
+
     }
+
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+
     }
 
     public int getEdad() {
@@ -52,16 +57,22 @@ public class Persona {
         this.telefono = telefono;
     }
 
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
+
     @Override
     public String toString() {
-        return "Persona.    " +
+        return "Persona:    " +
                 "nombre: " + nombre + '\'' +
                 ", rut: " + rut + '\'' +
                 ", telefono: " + telefono + '\'' +
                 ", edad: " + edad +
-               ".    ";
+                ", direccion: " + direccion +
+                '}';
     }
-
-
-
 }

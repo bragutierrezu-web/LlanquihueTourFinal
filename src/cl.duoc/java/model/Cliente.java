@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class Cliente extends Persona {
     private String idioma;
@@ -11,8 +11,8 @@ public Cliente() {
 
 }
 
-    public Cliente(String nombre, int edad, String rut, String telefono, String idioma, String nacionalidad, Tour tour) {
-        super(nombre, edad, rut, telefono);
+    public Cliente(String nombre, int edad, String rut, String telefono,Direccion direccion, String idioma, String nacionalidad, Tour tour) {
+        super(nombre, edad, rut, telefono, direccion);
         this.idioma = idioma;
         this.nacionalidad = nacionalidad;
         this.tour = tour;
@@ -45,7 +45,7 @@ public Cliente() {
 
     @Override
     public String toString() {
-        return super.toString() + "Cliente.   " +
+        return super.toString() + "Cliente:   " +
                 "idioma: " + idioma + '\'' +
                 ", nacionalidad: " + nacionalidad + '\'' +
                 ", tour: " + tour;

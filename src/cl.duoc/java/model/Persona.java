@@ -1,11 +1,11 @@
 package model;
 
 public class Persona {
-    private String nombre;
-    private String rut;
-    private String telefono;
-    private int edad;
-    private Direccion direccion;
+    protected String nombre;
+    protected String rut;
+    protected String telefono;
+    protected int edad;
+    protected Direccion direccion;
 
     public Persona () {
 
